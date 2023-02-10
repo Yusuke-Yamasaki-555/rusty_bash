@@ -1,0 +1,495 @@
+execve("./target/release/sush", ["./target/release/sush"], 0x7fff70805d10 /* 57 vars */) = 0
+brk(NULL)                               = 0x55ccd3554000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc0a3f6ae0) = -1 EINVAL (無効な引数です)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (そのようなファイルやディレクトリはありません)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=95667, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 95667, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fd5258ab000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=596864, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd5258a9000
+mmap(NULL, 127304, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd525889000
+mmap(0x7fd52588c000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fd52588c000
+mmap(0x7fd5258a3000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7fd5258a3000
+mmap(0x7fd5258a7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x7fd5258a7000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P9\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1953112, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 1994096, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd5256a2000
+mmap(0x7fd5256c4000, 1417216, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7fd5256c4000
+mmap(0x7fd52581e000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17c000) = 0x7fd52581e000
+mmap(0x7fd525876000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d4000) = 0x7fd525876000
+mmap(0x7fd52587c000, 52592, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fd52587c000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd52569f000
+arch_prctl(ARCH_SET_FS, 0x7fd52569f780) = 0
+set_tid_address(0x7fd52569fa50)         = 13208
+set_robust_list(0x7fd52569fa60, 24)     = 0
+rseq(0x7fd5256a00a0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7fd525876000, 16384, PROT_READ) = 0
+mprotect(0x7fd5258a7000, 4096, PROT_READ) = 0
+mprotect(0x55ccd1aff000, 20480, PROT_READ) = 0
+mprotect(0x7fd5258f4000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7fd5258ab000, 95667)           = 0
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd5256daf50}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x55ccd1ac6910, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7fd5256daf50}, NULL, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=0x55ccd1ac6910, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7fd5256daf50}, NULL, 8) = 0
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fd5258c0000
+mprotect(0x7fd5258c0000, 4096, PROT_NONE) = 0
+sigaltstack({ss_sp=0x7fd5258c1000, ss_flags=0, ss_size=8192}, NULL) = 0
+getrandom("\x54\xa3\xe1\x66\x14\x3e\x75\xc8", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x55ccd3554000
+brk(0x55ccd3575000)                     = 0x55ccd3575000
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+newfstatat(3, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+read(3, "55ccd1a87000-55ccd1a8f000 r--p 0"..., 1024) = 1024
+read(3, "  /usr/lib/libc.so.6\n7fd52587600"..., 1024) = 1024
+read(3, "103:0a 10489105                 "..., 1024) = 697
+close(3)                                = 0
+sched_getaffinity(13208, 32, [0 1 2 3 4 5 6 7 8 9 10 11]) = 8
+pipe2([3, 4], O_CLOEXEC)                = 0
+fcntl(4, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+rt_sigaction(SIGINT, {sa_handler=0x55ccd1a9f970, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd5256daf50}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7fd525724fb0, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fd5256daf50}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fd52549e000
+mprotect(0x7fd52549f000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fd52569e990, parent_tid=0x7fd52569e990, exit_signal=0, stack=0x7fd52549e000, stack_size=0x1fff40, tls=0x7fd52569e6c0} => {parent_tid=[13209]}, 88) = 13209
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+write(1, "\360\237\215\243 ", 5)        = 5
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IXOFF|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, SNDCTL_TMR_START or TCSETS, {c_iflag=IXOFF|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+read(0, "l", 8192)                      = 1
+write(1, "l", 1)                        = 1
+ioctl(1, TIOCGWINSZ, {ws_row=26, ws_col=86, ws_xpixel=688, ws_ypixel=446}) = 0
+read(0, "s", 8192)                      = 1
+write(1, "s", 1)                        = 1
+ioctl(1, TIOCGWINSZ, {ws_row=26, ws_col=86, ws_xpixel=688, ws_ypixel=446}) = 0
+read(0, " ", 8192)                      = 1
+write(1, " ", 1)                        = 1
+ioctl(1, TIOCGWINSZ, {ws_row=26, ws_col=86, ws_xpixel=688, ws_ypixel=446}) = 0
+read(0, "-", 8192)                      = 1
+write(1, "-", 1)                        = 1
+ioctl(1, TIOCGWINSZ, {ws_row=26, ws_col=86, ws_xpixel=688, ws_ypixel=446}) = 0
+read(0, "l", 8192)                      = 1
+write(1, "l", 1)                        = 1
+ioctl(1, TIOCGWINSZ, {ws_row=26, ws_col=86, ws_xpixel=688, ws_ypixel=446}) = 0
+read(0, "\r", 8192)                     = 1
+write(1, "\r\n", 2)                     = 2
+ioctl(1, SNDCTL_TMR_START or TCSETS, {c_iflag=ICRNL|IXON|IXOFF|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+write(1, "[\"ls\", \"-l\"]\n", 13)      = 13
+execve("/home/arch/.cargo/bin/ls", ["ls", "-l"], 0x7ffc0a3f6c48 /* 57 vars */) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+execve("/usr/local/sbin/ls", ["ls", "-l"], 0x7ffc0a3f6c48 /* 57 vars */) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+execve("/usr/local/bin/ls", ["ls", "-l"], 0x7ffc0a3f6c48 /* 57 vars */) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+execve("/usr/bin/ls", ["ls", "-l"], 0x7ffc0a3f6c48 /* 57 vars */) = 0
+brk(NULL)                               = 0x55d6bb509000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffd96ec8db0) = -1 EINVAL (無効な引数です)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (そのようなファイルやディレクトリはありません)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=95667, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 95667, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff96a5e4000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300r\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=42984, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff96a5e2000
+mmap(NULL, 45128, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff96a5d6000
+mmap(0x7ff96a5d9000, 20480, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7ff96a5d9000
+mmap(0x7ff96a5de000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8000) = 0x7ff96a5de000
+mmap(0x7ff96a5e0000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7ff96a5e0000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P9\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1953112, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 1994096, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff96a3ef000
+mmap(0x7ff96a411000, 1417216, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7ff96a411000
+mmap(0x7ff96a56b000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17c000) = 0x7ff96a56b000
+mmap(0x7ff96a5c3000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d4000) = 0x7ff96a5c3000
+mmap(0x7ff96a5c9000, 52592, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7ff96a5c9000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff96a3ec000
+arch_prctl(ARCH_SET_FS, 0x7ff96a3ec740) = 0
+set_tid_address(0x7ff96a3eca10)         = 13208
+set_robust_list(0x7ff96a3eca20, 24)     = 0
+rseq(0x7ff96a3ed060, 0x20, 0, 0x53053053) = 0
+mprotect(0x7ff96a5c3000, 16384, PROT_READ) = 0
+mprotect(0x7ff96a5e0000, 4096, PROT_READ) = 0
+mprotect(0x55d6ba228000, 8192, PROT_READ) = 0
+mprotect(0x7ff96a62d000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7ff96a5e4000, 95667)           = 0
+prctl(PR_CAPBSET_READ, CAP_MAC_OVERRIDE) = 1
+prctl(PR_CAPBSET_READ, 0x30 /* CAP_??? */) = -1 EINVAL (無効な引数です)
+prctl(PR_CAPBSET_READ, CAP_CHECKPOINT_RESTORE) = 1
+prctl(PR_CAPBSET_READ, 0x2c /* CAP_??? */) = -1 EINVAL (無効な引数です)
+prctl(PR_CAPBSET_READ, 0x2a /* CAP_??? */) = -1 EINVAL (無効な引数です)
+prctl(PR_CAPBSET_READ, 0x29 /* CAP_??? */) = -1 EINVAL (無効な引数です)
+getrandom("\x56\x5f\x55\xaa\x5a\xae\x27\x02", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x55d6bb509000
+brk(0x55d6bb52a000)                     = 0x55d6bb52a000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=4129152, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 4129152, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff969e00000
+close(3)                                = 0
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IXOFF|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2998, ...}, AT_EMPTY_PATH) = 0
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2998
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/share/locale/ja/LC_TIME/coreutils.mo", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=380534, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 380534, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff96a38f000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/gconv/gconv-modules.cache", O_RDONLY) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+openat(AT_FDCWD, "/usr/lib/gconv/gconv-modules", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=3916, ...}, AT_EMPTY_PATH) = 0
+read(3, "# GNU libc iconv configuration.\n"..., 4096) = 3916
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/gconv/gconv-modules.d", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x55d6bb510e40 /* 3 entries */, 32768) = 96
+openat(AT_FDCWD, "/usr/lib/gconv/gconv-modules.d/gconv-modules-extra.conf", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=53974, ...}, AT_EMPTY_PATH) = 0
+read(4, "# GNU libc iconv configuration.\n"..., 4096) = 4096
+read(4, "B1002//\tJUS_I.B1.002//\nmodule\tJU"..., 4096) = 4096
+read(4, "59-5//\nalias\tISO_8859-5//\t\tISO-8"..., 4096) = 4096
+read(4, "59-16//\t\tINTERNAL\t\tISO8859-16\t1\n"..., 4096) = 4096
+read(4, "-SE-A\t1\nmodule\tINTERNAL\t\tEBCDIC-"..., 4096) = 4096
+read(4, "97\t\t1\n\n#\tfrom\t\t\tto\t\t\tmodule\t\tcos"..., 4096) = 4096
+read(4, "1\n\n#\tfrom\t\t\tto\t\t\tmodule\t\tcost\nal"..., 4096) = 4096
+brk(0x55d6bb54b000)                     = 0x55d6bb54b000
+read(4, "6//\t\tIBM1046//\nalias\tCP1046//\t\tI"..., 4096) = 4096
+read(4, "\tto\t\t\tmodule\t\tcost\nalias\tRUSCII/"..., 4096) = 4096
+read(4, "03//\nmodule\tCSN_369103//\t\tINTERN"..., 4096) = 4096
+read(4, "\tmodule\t\tcost\nalias\tISO-IR-8-1//"..., 4096) = 4096
+read(4, "IBM1156\t\t1\n\n#\tfrom\t\t\tto\t\t\tmodule"..., 4096) = 4096
+read(4, "\t\tIBM1166//\nalias\tCP1166//\t\tIBM1"..., 4096) = 4096
+read(4, "alias\tROMAN9//\t\tHP-ROMAN9//\nalia"..., 4096) = 726
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+getdents64(3, 0x55d6bb510e40 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+futex(0x7ff96a5c888c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x55d6bb5391a0 /* 13 entries */, 32768) = 368
+statx(AT_FDCWD, "Cargo.lock", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=5560, ...}) = 0
+getxattr("Cargo.lock", "system.posix_acl_access", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(4)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(4)                                = 0
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=359, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=359, ...}, AT_EMPTY_PATH) = 0
+read(4, "# Name Service Switch configurat"..., 4096) = 359
+read(4, "", 4096)                       = 0
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=359, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=1277, ...}, AT_EMPTY_PATH) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "root:x:0:0::/root:/bin/bash\nbin:"..., 4096) = 1277
+close(4)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(4)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(4)                                = 0
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=359, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/group", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=758, ...}, AT_EMPTY_PATH) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "root:x:0:root\nsys:x:3:bin\nmem:x:"..., 4096) = 758
+close(4)                                = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=95667, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 95667, PROT_READ, MAP_PRIVATE, 4, 0) = 0x7ff96a5e4000
+close(4)                                = 0
+openat(AT_FDCWD, "/usr/lib/libnss_systemd.so.2", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(4, "", {st_mode=S_IFREG|0755, st_size=346344, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 346688, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x7ff96a33a000
+mmap(0x7ff96a341000, 225280, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x7000) = 0x7ff96a341000
+mmap(0x7ff96a378000, 73728, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x3e000) = 0x7ff96a378000
+mmap(0x7ff96a38a000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x50000) = 0x7ff96a38a000
+close(4)                                = 0
+openat(AT_FDCWD, "/usr/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(4, "", {st_mode=S_IFREG|0755, st_size=944536, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 946368, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x7ff96a252000
+mmap(0x7ff96a260000, 499712, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0xe000) = 0x7ff96a260000
+mmap(0x7ff96a2da000, 385024, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x88000) = 0x7ff96a2da000
+mmap(0x7ff96a338000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0xe5000) = 0x7ff96a338000
+close(4)                                = 0
+openat(AT_FDCWD, "/usr/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=596864, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 127304, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x7ff96a232000
+mmap(0x7ff96a235000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x3000) = 0x7ff96a235000
+mmap(0x7ff96a24c000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x1a000) = 0x7ff96a24c000
+mmap(0x7ff96a250000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x1d000) = 0x7ff96a250000
+close(4)                                = 0
+mprotect(0x7ff96a250000, 4096, PROT_READ) = 0
+mprotect(0x7ff96a338000, 4096, PROT_READ) = 0
+mprotect(0x7ff96a38a000, 16384, PROT_READ) = 0
+munmap(0x7ff96a5e4000, 95667)           = 0
+rt_sigprocmask(SIG_BLOCK, [HUP USR1 USR2 PIPE ALRM CHLD TSTP URG VTALRM PROF WINCH IO], [], 8) = 0
+futex(0x7ff96a38ea18, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+openat(AT_FDCWD, "/run/systemd/userdb/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0755, st_size=60, ...}, AT_EMPTY_PATH) = 0
+getdents64(4, 0x55d6bb5423c0 /* 3 entries */, 32768) = 96
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+connect(5, {sa_family=AF_UNIX, sun_path="/run/systemd/userdb/io.systemd.DynamicUser"}, 45) = 0
+getpid()                                = 13208
+epoll_create1(EPOLL_CLOEXEC)            = 6
+timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC|TFD_NONBLOCK) = 7
+epoll_ctl(6, EPOLL_CTL_ADD, 7, {events=EPOLLIN, data={u32=3142886992, u64=94380754249296}}) = 0
+brk(0x55d6bb56c000)                     = 0x55d6bb56c000
+epoll_ctl(6, EPOLL_CTL_ADD, 5, {events=0, data={u32=3142889184, u64=94380754251488}}) = 0
+getrandom("\xfd\x99\xea\xec\xd7\x1b\xa3\x04\x9a\x42\x76\xcf\xab\x6a\xbc\xd8", 16, GRND_INSECURE) = 16
+futex(0x7ff96a38e0e0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getdents64(4, 0x55d6bb5423c0 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+epoll_ctl(6, EPOLL_CTL_MOD, 5, {events=EPOLLIN|EPOLLOUT, data={u32=3142889184, u64=94380754251488}}) = 0
+openat(AT_FDCWD, "/proc/sys/kernel/random/boot_id", O_RDONLY|O_NOCTTY|O_CLOEXEC) = 4
+read(4, "c6166282-217c-4870-9c37-cc95319e"..., 38) = 37
+read(4, "", 1)                          = 0
+close(4)                                = 0
+timerfd_settime(7, TFD_TIMER_ABSTIME, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=13091, tv_nsec=103370000}}, NULL) = 0
+epoll_wait(6, [{events=EPOLLOUT, data={u32=3142889184, u64=94380754251488}}], 8, 0) = 1
+sendto(5, "{\"method\":\"io.systemd.UserDataba"..., 112, MSG_DONTWAIT|MSG_NOSIGNAL, NULL, 0) = 112
+epoll_ctl(6, EPOLL_CTL_MOD, 5, {events=EPOLLIN, data={u32=3142889184, u64=94380754251488}}) = 0
+epoll_wait(6, [{events=EPOLLIN, data={u32=3142889184, u64=94380754251488}}], 8, 0) = 1
+mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff96a211000
+recvfrom(5, "{\"error\":\"io.systemd.UserDatabas"..., 135152, MSG_DONTWAIT, NULL, NULL) = 66
+epoll_ctl(6, EPOLL_CTL_MOD, 5, {events=0, data={u32=3142889184, u64=94380754251488}}) = 0
+epoll_wait(6, [], 8, 0)                 = 0
+epoll_wait(6, [], 8, 0)                 = 0
+epoll_ctl(6, EPOLL_CTL_DEL, 5, NULL)    = 0
+close(5)                                = 0
+munmap(0x7ff96a211000, 135168)          = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "etc", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 5
+newfstatat(5, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(5, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(5)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "run", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 5
+newfstatat(5, "", {st_mode=S_IFDIR|0755, st_size=500, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(5, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(5)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "run", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 5
+newfstatat(5, "", {st_mode=S_IFDIR|0755, st_size=500, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(5, "host", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(5)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "usr", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 5
+newfstatat(5, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(5, "local", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(5)                                = 0
+openat(4, "lib", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 5
+newfstatat(5, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(5, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(5)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "usr", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 5
+newfstatat(5, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(5, "lib", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0755, st_size=135168, ...}, AT_EMPTY_PATH) = 0
+close(5)                                = 0
+openat(4, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(4)                                = 0
+openat(AT_FDCWD, "/etc/userdb/984.group", O_RDONLY|O_CLOEXEC) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+openat(AT_FDCWD, "/run/userdb/984.group", O_RDONLY|O_CLOEXEC) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+openat(AT_FDCWD, "/run/host/userdb/984.group", O_RDONLY|O_CLOEXEC) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+openat(AT_FDCWD, "/usr/local/lib/userdb/984.group", O_RDONLY|O_CLOEXEC) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+openat(AT_FDCWD, "/usr/lib/userdb/984.group", O_RDONLY|O_CLOEXEC) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(6)                                = 0
+close(7)                                = 0
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=359, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/group", O_RDONLY|O_CLOEXEC) = 4
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=758, ...}, AT_EMPTY_PATH) = 0
+lseek(4, 0, SEEK_SET)                   = 0
+read(4, "root:x:0:root\nsys:x:3:bin\nmem:x:"..., 4096) = 758
+close(4)                                = 0
+rt_sigprocmask(SIG_BLOCK, [HUP USR1 USR2 PIPE ALRM CHLD TSTP URG VTALRM PROF WINCH IO], [HUP USR1 USR2 PIPE ALRM CHLD TSTP URG VTALRM PROF WINCH IO], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [HUP USR1 USR2 PIPE ALRM CHLD TSTP URG VTALRM PROF WINCH IO], NULL, 8) = 0
+openat(AT_FDCWD, "/run/systemd/userdb/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0755, st_size=60, ...}, AT_EMPTY_PATH) = 0
+getdents64(4, 0x55d6bb54d860 /* 3 entries */, 32768) = 96
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 5
+connect(5, {sa_family=AF_UNIX, sun_path="/run/systemd/userdb/io.systemd.DynamicUser"}, 45) = 0
+epoll_create1(EPOLL_CLOEXEC)            = 6
+timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC|TFD_NONBLOCK) = 7
+epoll_ctl(6, EPOLL_CTL_ADD, 7, {events=EPOLLIN, data={u32=3142886992, u64=94380754249296}}) = 0
+epoll_ctl(6, EPOLL_CTL_ADD, 5, {events=0, data={u32=3142887664, u64=94380754249968}}) = 0
+getdents64(4, 0x55d6bb54d860 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "etc", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(8)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "run", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=500, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(8)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "run", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=500, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "host", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(8)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "usr", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "local", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(8)                                = 0
+openat(4, "lib", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(8)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "usr", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "lib", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0755, st_size=135168, ...}, AT_EMPTY_PATH) = 0
+close(8)                                = 0
+openat(4, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(4)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "etc", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(8)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "run", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=500, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(8)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "run", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=500, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "host", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(8)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "usr", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "local", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(8)                                = 0
+openat(4, "lib", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(8)                                = 0
+openat(AT_FDCWD, "/", O_RDONLY|O_CLOEXEC|O_PATH|O_DIRECTORY) = 4
+openat(4, "usr", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 8
+newfstatat(8, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+close(4)                                = 0
+openat(8, "lib", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = 4
+newfstatat(4, "", {st_mode=S_IFDIR|0755, st_size=135168, ...}, AT_EMPTY_PATH) = 0
+close(8)                                = 0
+openat(4, "userdb", O_RDONLY|O_NOFOLLOW|O_CLOEXEC|O_PATH) = -1 ENOENT (そのようなファイルやディレクトリはありません)
+close(4)                                = 0
+epoll_ctl(6, EPOLL_CTL_MOD, 5, {events=EPOLLIN|EPOLLOUT, data={u32=3142887664, u64=94380754249968}}) = 0
+timerfd_settime(7, TFD_TIMER_ABSTIME, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=13091, tv_nsec=103370000}}, NULL) = 0
+epoll_wait(6, [{events=EPOLLOUT, data={u32=3142887664, u64=94380754249968}}], 8, 0) = 1
+sendto(5, "{\"method\":\"io.systemd.UserDataba"..., 134, MSG_DONTWAIT|MSG_NOSIGNAL, NULL, 0) = 134
+epoll_ctl(6, EPOLL_CTL_MOD, 5, {events=EPOLLIN, data={u32=3142887664, u64=94380754249968}}) = 0
+epoll_wait(6, [{events=EPOLLIN, data={u32=3142887664, u64=94380754249968}}], 8, 0) = 1
+brk(0x55d6bb58e000)                     = 0x55d6bb58e000
+recvfrom(5, "{\"error\":\"io.systemd.UserDatabas"..., 131080, MSG_DONTWAIT, NULL, NULL) = 66
+epoll_ctl(6, EPOLL_CTL_MOD, 5, {events=0, data={u32=3142887664, u64=94380754249968}}) = 0
+epoll_wait(6, [], 8, 0)                 = 0
+epoll_wait(6, [], 8, 0)                 = 0
+epoll_ctl(6, EPOLL_CTL_DEL, 5, NULL)    = 0
+close(5)                                = 0
+close(6)                                = 0
+close(7)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+statx(AT_FDCWD, "target", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+getxattr("target", "system.posix_acl_access", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+getxattr("target", "system.posix_acl_default", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+statx(AT_FDCWD, "Cargo.toml", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=250, ...}) = 0
+getxattr("Cargo.toml", "system.posix_acl_access", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+statx(AT_FDCWD, "LICENSE", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=1520, ...}) = 0
+getxattr("LICENSE", "system.posix_acl_access", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+statx(AT_FDCWD, "log", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+getxattr("log", "system.posix_acl_access", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+getxattr("log", "system.posix_acl_default", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+statx(AT_FDCWD, "README.md", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=113, ...}) = 0
+getxattr("README.md", "system.posix_acl_access", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+statx(AT_FDCWD, "src", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+getxattr("src", "system.posix_acl_access", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+getxattr("src", "system.posix_acl_default", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+statx(AT_FDCWD, "test", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+getxattr("test", "system.posix_acl_access", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+getxattr("test", "system.posix_acl_default", NULL, 0) = -1 ENODATA (利用可能なデータがありません)
+getdents64(3, 0x55d6bb5391a0 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/share/locale/ja/LC_MESSAGES/coreutils.mo", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=380534, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 380534, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff969da3000
+close(3)                                = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x4), ...}, AT_EMPTY_PATH) = 0
+write(1, "\345\220\210\350\250\210 36\n", 10) = 10
+openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_EMPTY_PATH) = 0
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_EMPTY_PATH) = 0
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0\0\4\0\0\0\0"..., 4096) = 309
+lseek(3, -176, SEEK_CUR)                = 133
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0\0\4\0\0\0\0"..., 4096) = 176
+close(3)                                = 0
+write(1, "-rw-r--r-- 1 arch users 5560  2\346"..., 55) = 55
+write(1, "-rw-r--r-- 1 arch users  250  2\346"..., 55) = 55
+write(1, "-rw-r--r-- 1 arch users 1520  2\346"..., 52) = 52
+write(1, "-rw-r--r-- 1 arch users  113  2\346"..., 54) = 54
+write(1, "drwxr-xr-x 2 arch users 4096  2\346"..., 48) = 48
+write(1, "drwxr-xr-x 2 arch users 4096  2\346"..., 48) = 48
+write(1, "drwxr-xr-x 4 arch users 4096  2\346"..., 51) = 51
+write(1, "drwxr-xr-x 3 arch users 4096  2\346"..., 49) = 49
+close(1)                                = 0
+close(2)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
