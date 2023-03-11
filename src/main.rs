@@ -42,7 +42,10 @@ fn main_loop(core: &mut ShellCore) {
     loop {
         if feeder.feed_line(core) {
             match Command::parse(&mut feeder, core){
-                Some(mut c) => c.exec(core),
+                Some(mut c) => c.exec(core),  // Command型のインスタンスが名前cで取り出される.exec
+                                              // = elem_command.rsのCommandのメソッド(第１引数がselfだから)であるexec関数.
+                                              // self.text,
+                                              // self.cargsで自身のデータを読み書きできる.
                 None => process::exit(1)
             }
         }
